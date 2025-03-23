@@ -1,7 +1,7 @@
 import { render, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
-import { QuizQuestionModel } from "../models/quiz.models";
+import { QuizQuestionModel } from "../../domain/models/quiz.models";
 import QuizQuestion from "./QuizQuestion";
 
 function setup(isQuizComplete?: boolean) {

@@ -13,8 +13,8 @@ export default defineConfig({
         "src/**/ui/**",
         "src/**/utils/**",
       ],
-      exclude: ["**/**.spec.ts"],
     },
+    include: ["src/**/*.spec.{ts,tsx}"],
     setupFiles: "./vitest.setup.ts",
   },
 });

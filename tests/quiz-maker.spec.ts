@@ -1,12 +1,12 @@
 import { expect, test } from "@playwright/test";
 
 test("run a quiz", async ({ page }) => {
-  await page.routeFromHAR("./e2e/hars/categories.har", {
+  await page.routeFromHAR("./tests/hars/categories.har", {
     url: "https://opentdb.com/api_category.php",
     update: false,
   });
 
-  await page.routeFromHAR("./e2e/hars/questions.har", {
+  await page.routeFromHAR("./tests/hars/questions.har", {
     url: "https://opentdb.com/api.php?**",
     update: false,
   });

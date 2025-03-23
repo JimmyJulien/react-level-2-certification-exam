@@ -1,8 +1,8 @@
 import { render, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
+import { QuizModel } from "../../domain/models/quiz.models";
 import ROUTES from "../../infrastructure/routing/routes";
-import { QuizModel } from "../models/quiz.models";
 import ResultPage from "./ResultPage";
 
 const mockedNavigate = vi.fn();
@@ -25,7 +25,7 @@ vi.mock(import("../../domain/hooks/useQuiz"), () => {
       quiz: {
         config: {
           category: { label: "c", value: "v" },
-          difficulty: { label: "d", value: "v" },
+          difficulty: { label: "d", value: "easy" },
         },
         questions: [
           {
