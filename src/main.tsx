@@ -2,10 +2,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router";
-import { QuizContextProvider } from "./contexts/QuizContextProvider.tsx";
+import { QuizContextProvider } from "./domain/contexts/QuizContextProvider.tsx";
 import "./index.css";
-import router from "./routing/router.tsx";
-import UiLoader from "./ui/UiLoader.tsx";
+import router from "./infrastructure/routing/router.tsx";
+import UiLoader from "./presentation/ui/UiLoader.tsx";
 
 const queryClient = new QueryClient();
 
