@@ -33,5 +33,5 @@ test("run a quiz", async ({ page }) => {
 
   await page.getByRole("button", { name: "Create a new quiz" }).click();
 
-  await expect(page).toHaveURL("http://localhost:5173/config");
+  await expect(page).toHaveURL(/config/);
 });

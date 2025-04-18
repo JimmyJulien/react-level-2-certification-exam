@@ -18,8 +18,8 @@ type QuizConfigFormProps = {
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const QuizConfigFormSchema = z.object({
-  categoryId: z.string(),
-  difficultyId: z.string(),
+  categoryId: z.string().nonempty(),
+  difficultyId: z.string().nonempty(),
 });
 
 type QuizConfigFormModel = z.infer<typeof QuizConfigFormSchema>;
@@ -64,7 +64,7 @@ export default function QuizConfigForm({
         <select
           disabled={disabled}
           id="categorySelect"
-          {...register("categoryId")}
+          {...register("categoryId", { required: true })}
         >
           <option value={""}>Select a category</option>
           {categories.map((category) => (
@@ -79,7 +79,7 @@ export default function QuizConfigForm({
         <select
           disabled={disabled}
           id="difficultySelect"
-          {...register("difficultyId")}
+          {...register("difficultyId", { required: true })}
         >
           <option value={""}>Select a difficulty</option>
           {difficulties.map((difficulty) => (

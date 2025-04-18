@@ -25,7 +25,7 @@ export default function ResultPage() {
   return (
     <UiPage>
       <UiPageTitle>RESULTS</UiPageTitle>
-      <UiContainer gap="0.5rem" data-testid="">
+      <UiContainer gap="0.5rem" data-testid="question">
         {quiz?.questions.map((quizQuestion: QuizQuestionModel) => (
           <QuizQuestion
             isQuizComplete
